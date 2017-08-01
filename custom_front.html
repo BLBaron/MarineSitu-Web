@@ -1,0 +1,91 @@
+<html>
+<head>
+	<link rel="stylesheet" href="custom_front.css">
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto"/>	
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Catamaran"/>
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Overpass"/>		
+	<script src="menu_response.js"></script>
+</head>
+<body>
+
+	<header>
+		<div class="header" id="mainHeader">
+			<p><img src="MS wave-08.png" alt="wave">Marine Situ</p>
+		</div>
+		<ul class="topnav" id="myTopnav">
+			<li><a href="javascript:void(0);" class="menu" onclick="myFunction()">Menu</a><li>
+			<li><a href="#home" class="active">Front Page</a></li>
+			<li><a href="#news">System Health</a></li>
+			<li><a href="#contact">Detection Summary</a></li>
+			<li><a href="#about">Sensors</a></li>
+			<li><a href="#saving">Saving Configurations</a></li>
+			<li><a href="#manuals">Manuals</a></li>
+		</ul>
+	</header>
+	<div id="power">
+		<h1>AMP Power</h1>
+		<label class="switch-amp switch">
+			<input type="checkbox">
+			<span class="slider amp-slider round"></span>
+		</label>
+	</div>	
+	<div class="main">
+		<div class="container">
+			<div class="fixed-col column">
+				<h1>Status</h1>
+					<div id="main-status"><p>words</p></div>
+				<h1>Most Recent Error</h1>
+					<div id="recent-error"></div>
+				<h1>Offload Settings</h1>	
+					<div id="offload-set"></div>
+			</div>
+			<div class="flex-col column">
+			<h1>Sensor Controls</h1>
+				<div id="sensors">
+					<div class="sensor">
+						<div class="sensor-type"><h2><a href="#sensors">Cameras</a></h2></div>
+						<label class="switch-gen switch" id="1">
+							<input type="checkbox" class="switch-gen switch" id="1">
+							<span class="slider gen-slider round"></span>
+						</label>
+					</div>
+					<div class="sensor">
+						<div class="sensor-type"><h2><a href="#sensors">M3</a></h2></div>
+						<label class="switch-gen switch">
+							<input type="checkbox">
+							<span class="slider gen-slider round"></span>
+						</label>
+					</div>
+					<div class="sensor">
+						<div class="sensor-type"><h2><a href="#sensors">PAM</a></h2></div>
+						<label class="switch-gen switch">
+							<input type="checkbox">
+							<span class="slider gen-slider round"></span>
+						</label>
+					</div>
+					<div class="sensor">
+						<div class="sensor-type"><h2><a href="#sensors">BlueView</a></h2></div>
+						<label class="switch-gen switch">
+							<input type="checkbox">
+							<span class="slider gen-slider round"></span>
+						</label>
+					</div>
+					<div class="sensor">
+						<div class="sensor-type"><h2><a href="#sensors">ADCP</a></h2></div>
+						<label class="switch-gen switch">
+							<input type="checkbox">
+							<span class="slider gen-slider round"></span>
+						</label>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		<h1>Email Notifications</h1>	
+		<div id="emails"></div>
+	</div>
+	<footer>
+		<p>Updated 2017, Copywrite MarineSitu & MREL</p>
+	</footer>
+</body>
+</html>
