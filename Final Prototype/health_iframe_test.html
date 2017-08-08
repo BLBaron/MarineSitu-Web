@@ -1,0 +1,52 @@
+<html>
+<head>
+	<!-- for date range picker -->
+	<!-- Include Required Prerequisites -->
+	<script type="text/javascript" src="http://cdn.jsdelivr.net/jquery/1/jquery.min.js"></script>
+	<script type="text/javascript" src="http://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="bootstrap_modified.css" />
+	 
+	<!-- Include Date Range Picker -->
+	<script src="daterangepicker.js"></script>
+	<link rel="stylesheet" type="text/css" href="daterangepicker.css" />
+
+</head>
+<body>
+
+
+<div id="reportrange" class="pull-right" style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc; width: 290px; float:right;">
+	<i class="glyphicon glyphicon-calendar fa fa-calendar"></i>&nbsp;
+	<span></span> <b class="caret"></b>
+</div>
+
+
+
+<script type="text/javascript">
+$(function() {
+
+    var start = moment().subtract(29, 'days');
+    var end = moment();
+
+    function cb(start, end) {
+        $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+    }
+
+    $('#reportrange').daterangepicker({
+		"timePicker": true,
+		"timePickerIncrement": 5,
+        startDate: start,
+        endDate: end,
+        ranges: {
+			'Last Hour': [moment(), moment()],
+			'Today': [moment(), moment()],
+		    'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+		    'Last Week': [moment().subtract(6, 'days'), moment()],
+        }
+    }, cb);
+
+    cb(start, end);
+    
+});
+</script>
+</body>
+<html>

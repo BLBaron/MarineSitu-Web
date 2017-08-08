@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>System Health</title>
+
+	<link rel="stylesheet" href="inputs.css">
+	<link rel="stylesheet" href="navigation.css">
+	<link rel="stylesheet" href="system_health_styles.css">
+	<link rel="stylesheet" href="shared_styles.css">
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto"/>	
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Catamaran"/>
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Overpass"/>	
+
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">	
+	<script src="js/menu_response.js"></script>
+	
+	
+	<!-- for date range picker -->
+	<!-- Include Required Prerequisites -->
+	<script type="text/javascript" src="http://cdn.jsdelivr.net/jquery/1/jquery.min.js"></script>
+	<script type="text/javascript" src="http://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="bootstrap_modified.css" />
+	 
+	<!-- Include Date Range Picker -->
+	<script src="daterangepicker.js"></script>
+	<link rel="stylesheet" type="text/css" href="daterangepicker.css" />
+</head>
+<body>
+	<header>
+		<div class="header" id="mainHeader">
+			<p><img src="visual_assets/MS wave-08.png" alt="wave">Marine Situ</p>
+			<i class="material-icons md-36">account_circle</i>
+			<i class="material-icons md-36">mail_outline</i>
+		</div>
+		<ul class="topnav" id="myTopnav">
+			<li><a href="javascript:void(0);" class="menu" onclick="myFunction()">Menu</a><li>
+			<li><a href="custom_front.html">Front Page</a></li>
+			<li><a href="system_health.html" class="active">System Health</a></li>
+			<li><a href="detection_summary.html">Detection Summary</a></li>
+			<li><a href="sensors_all.html">Sensors</a></li>
+			<li><a href="saving_configs.html">Saving Configurations</a></li>
+			<li><a href="manuals.html">Manuals</a></li>
+		</ul>
+	</header>
+	<div id="main">
+	  <div class="column" id="info">
+		<h1>Limits</h1>
+		<div id="limits">
+			<p>Current Limit: 10000 Amps</p><br>
+			<label for="temp">Temperature Limit (&deg;C): </label><input type="text" id="temp"><br><br>
+			<label for="hum">Humidity Limit (%): </label><input type="text" id="hum">
+		</div>
+		<h1>Power (Watts)</h1>
+		<div id="power">
+			<p id="power_value">placeholder</p>
+		</div>
+		<h1>Error Log</h1>
+		<div id="errors">
+			<ul id="error_list">
+				<li>test for format</li>
+				<li>test for format</li>
+				<li>test for format</li>
+				<li>test for format</li>
+				<li>test for format</li>
+				<li>test for format</li>
+				<li>test for format</li>
+				<li>test for format</li>
+				<li>test for format</li>
+				<li>test for format</li>
+				<li>test for format</li>
+				<li>test for format</li>
+				<li>test for format</li>
+				<li>test for format</li>
+				<li>test for format</li>
+				<li>test for format</li>
+				<li>test for format</li>
+				<li>test for format</li>
+			</ul><!-- this list can then be populated with errors -->
+		</div> 
+	  </div>
+	  <div class="column" id="temp_humidity">
+		<h1>Temperature & Humidity</h1>
+		<div id="select_time">
+		  <select>
+			<option value="last hour">Last Hour</option>
+			<option value="last day">Last Day</option>
+			<option value="last week">Last Week</option>
+			<option value="custom"/>Custom</option>
+		  </select> 	  
+		</div>
+		<div id="reportrange" class="pull-right" style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc; width: 290px; float:right;">
+			<i class="glyphicon glyphicon-calendar fa fa-calendar"></i>&nbsp;
+			<span></span> <b class="caret"></b>
+		</div>
+		<div id="graphs"></div>
+
+
+	</div>
+	</div>
+	<footer>
+		<p>Updated 2017, Copywrite MarineSitu & MREL</p>
+	</footer>
+	
+
+<script type="text/javascript">
+$(function() {
+
+    var start = moment().subtract(29, 'days');
+    var end = moment();
+
+    function cb(start, end) {
+        $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+    }
+
+    $('#reportrange').daterangepicker({
+		"timePicker": true,
+		"timePickerIncrement": 10,
+        startDate: start,
+        endDate: end,
+        ranges: {
+			'Today': [moment(), moment()],
+		    'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+		    'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+		    'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+		    'This Month': [moment().startOf('month'), moment().endOf('month')],
+		    'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+        }
+    }, cb);
+
+    cb(start, end);
+    
+});
+</script>
+</body>
+</html>

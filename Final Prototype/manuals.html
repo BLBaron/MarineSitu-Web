@@ -1,0 +1,225 @@
+<!-- accordion menu created with this tutorial: https://www.w3schools.com/howto/howto_js_accordion.asp 
+layout of fixed sidebar used this tutorial: http://callmenick.com/post/single-page-site-with-smooth-scrolling-highlighted-link-and-fixed-navigation
+
+
+note for future: set it up so that teh nav bar recognizes what section you are on and the active
+link becomes highlighted with blue. I could not figure out this functionality right now, and I think it's best
+left to another day in the fall when there is more time to complete it. The structure for adding information to each accordion 
+section is there. More accordion sections can be added by copy and pasting the code and updating the heading and class
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta charset="utf-8">
+	<title>System Manuals</title>
+	<link rel="stylesheet" href="navigation.css">
+	<link rel="stylesheet" href="manuals_styles.css">
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto"/>	
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Catamaran"/>
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Overpass"/>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">	
+	
+	<script src="js/menu_response.js"></script>
+	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src='js/jquery.scrollto.js'></script>
+	
+
+</head>
+<body>
+
+	<header>
+		<div class="header" id="mainHeader">
+			<p><img src="visual_assets/MS wave-08.png" alt="wave">Marine Situ</p>
+			<i class="material-icons md-36">account_circle</i>
+			<i class="material-icons md-36">mail_outline</i>
+		</div>
+		<ul class="topnav" id="myTopnav">
+			<li><a href="javascript:void(0);" class="menu" onclick="myFunction()">Menu</a><li>
+			<li><a href="custom_front.html">Front Page</a></li>
+			<li><a href="system_health.html">System Health</a></li>
+			<li><a href="detection_summary.html">Detection Summary</a></li>
+			<li><a href="sensors_all.html">Sensors</a></li>
+			<li><a href="saving_configs.html">Saving Configurations</a></li>
+			<li><a href="manuals.html" class="active">Manuals</a></li>
+		</ul>
+	</header>
+	
+	
+<div id="main">
+    <div class="container clearfix">        
+        <div id="sidebar">
+            <div id="nav-anchor"></div>
+            <nav>
+				<ul>
+					<li><a href="#sensor-info">Sensor Information</a></li>
+					<li><a href="#other-info">Other Information</a></li>
+					<li><a href="#more-info">More Information</a></li>
+				</ul>
+            </nav>
+        </div><!-- /sidebar -->
+        <div id="content">
+			<a class="anchor" id="sensor-info"></a>
+			<h1>Sensor Information</h1>
+			<div class="accordion_group">
+				<button class="accordion">Cameras</button>
+				<div class="panel">
+				  <p>Lorem ipsum dolor sit amet...</p>
+				</div>
+
+				<button class="accordion">ADCP</button>
+				<div class="panel">
+				  <p>Lorem ipsum dolor sit amet...</p>
+				</div>
+
+				<button class="accordion">BlueView</button>
+				<div class="panel">
+				  <p>Lorem ipsum dolor sit amet...</p>
+				</div>
+				
+				<button class="accordion">M3</button>
+				<div class="panel">
+				  <p>Hello, it's me<br>
+					I was wondering if after all these years you'd like to meet<br>
+					To go over everything<br>
+					They say that time's supposed to heal ya<br>
+					But I ain't done much healing<br></p>
+					<p>
+					Hello, can you hear me?<br>
+					I'm in California dreaming about who we used to be<br>
+					When we were younger and free<br>
+					I've forgotten how it felt before the world fell at our feet<br></p>
+					<p>
+					There's such a difference between us<br>
+					And a million miles<br></p>
+					<p>
+					Hello from the other side<br>
+					I must have called a thousand times<br>
+					To tell you I'm sorry for everything that I've done<br>
+					But when I call you never seem to be home<br></p>
+					<p>
+					Hello from the outside<br>
+					At least I can say that I've tried<br>
+					To tell you I'm sorry for breaking your heart<br>
+					But it don't matter it clearly doesn't tear you apart anymore</p>
+				</div>
+				
+				<button class="accordion">PAM</button>
+				<div class="panel">
+				  <p>Lorem ipsum dolor sit amet...</p>
+				</div>
+			</div>
+			<a class="anchor" id="other-info"></a>
+			<h1>Other Information</h1>
+			<div class="accordion_group">
+				<button class="accordion">Stuff</button>
+				<div class="panel">
+				  <p>Lorem ipsum dolor sit amet...</p>
+				</div>
+
+				<button class="accordion">Stuff</button>
+				<div class="panel">
+				  <p>Lorem ipsum dolor sit amet...</p>
+				</div>
+
+				<button class="accordion">New Stuff</button>
+				<div class="panel">
+				  <p>Lorem ipsum dolor sit amet...</p>
+				</div>
+				
+				<button class="accordion">Old Stuff</button>
+				<div class="panel">
+				  <p>Lorem ipsum dolor sit amet...</p>
+				</div>
+				
+				<button class="accordion">More Stuff!</button>
+				<div class="panel">
+				  <p>Lorem ipsum dolor sit amet...</p>
+				</div>
+			</div>
+			<a class="anchor" id="more-info"></a>
+			<h1>More Information</h1>
+			<div class="accordion_group">
+				<button class="accordion">Stuff</button>
+				<div class="panel">
+				  <p>Lorem ipsum dolor sit amet...</p>
+				</div>
+
+				<button class="accordion">Stuff</button>
+				<div class="panel">
+				  <p>Lorem ipsum dolor sit amet...</p>
+				</div>
+
+				<button class="accordion">New Stuff</button>
+				<div class="panel">
+				  <p>Lorem ipsum dolor sit amet...</p>
+				</div>
+				
+				<button class="accordion">Old Stuff</button>
+				<div class="panel">
+				  <p>Lorem ipsum dolor sit amet...</p>
+				</div>
+				
+				<button class="accordion">More Stuff!</button>
+				<div class="panel">
+				  <p>Lorem ipsum dolor sit amet...</p>
+				</div>
+			</div>
+        </div><!-- /#content -->
+    </div><!-- /.container -->
+</div><!-- /#main -->
+
+	
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].onclick = function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight){
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  }
+}
+
+</script>
+<script>
+$(document).ready(function(){
+
+    /** 
+     * This part does the "fixed navigation after scroll" functionality
+     * We use the jQuery function scroll() to recalculate our variables as the 
+     * page is scrolled/
+     */
+    $(window).scroll(function(){
+        var window_top = $(window).scrollTop() + 120; // the "12" should equal the margin-top value for nav.stick
+        var div_top = $('#nav-anchor').offset().top;
+            if (window_top > div_top) {
+                $('nav').addClass('stick');
+            } else {
+                $('nav').removeClass('stick');
+            }
+    });
+
+    /**
+     * This part causes smooth scrolling using scrollto.js
+     * We target all a tags inside the nav, and apply the scrollto.js to it.
+     */
+    $("nav a").click(function(evn){
+        evn.preventDefault();
+        $('html,body').scrollTo(this.hash, this.hash); 
+    });
+
+});
+</script>
+
+</body>
+</html>
+
+
+

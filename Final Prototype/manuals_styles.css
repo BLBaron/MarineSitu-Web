@@ -1,0 +1,141 @@
+*,
+*:before,
+*:after { /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+	box-sizing: inherit;
+}
+
+
+body {
+	margin: 0px;
+	background-color: #EAF0F1;
+	padding-top: 100px;
+	font-family: "Roboto", Arial, sans-serif;
+}
+
+.anchor {
+	position: relative;
+	top: -85px;
+}
+
+#sidebar {
+    width:20%;
+    float:left;
+	margin-left: 5%;
+	margin-top: 2%;
+}
+
+#content {
+    width: 65%;
+	margin: 2% 5%;
+    float:right;
+}
+
+/* navigation */
+nav {
+    width:100%;
+    padding:0 12px;
+}
+
+nav.stick {
+    position: fixed;
+    top: 0;
+    z-index: 10000;
+    margin-top:120px;
+	width: 20%;
+}
+
+nav ul {
+    list-style-type:none;
+    margin:0;
+    padding:0;
+}
+
+nav li {
+	padding: 10px 0;
+	font-size: 1.2rem;
+}
+
+nav li a {
+    color: #06496D;
+	text-decoration: none;
+}
+
+nav li a:hover {
+    color: #6091B8;
+}
+
+
+a.nav-active {
+    color: #89C6CD;
+}
+
+
+
+/* Style the buttons that are used to open and close the accordion panel */
+button.accordion {
+    background-color: white;
+    color: black;
+    padding: 15px 20px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+button.accordion:hover {
+	color: white;
+	background-color: #43749B;
+}
+
+button.accordion.active {
+	background-color: #4499A3;
+	color:white;
+}
+
+
+/* Style the accordion panel. Note: hidden by default */
+div.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+.panel p {
+	margin: 0px;
+	font-size: 0.9rem;
+	padding: 5px;
+	padding-bottom: 15px;
+}
+
+.accordion {
+	font-size: 1.2rem;
+}
+
+.accordion_group {
+	width: 100%;
+	margin-top: 10px;
+}
+
+button.accordion:after {
+    content: url("visual_assets/ic_add_black_18px.svg");
+    font-size: 13px;
+    color: white;
+    float: right;
+    margin-left: 5px;
+}
+
+button.accordion.active:after {
+    content: url("visual_assets/ic_remove_white_18px.svg");
+}
+
+h1 {
+	font-size: 1.3rem;
+	font-family: Overpass;
+	font-weight: normal;
+	margin-top: 20px;
+	color: #06496D;
+}

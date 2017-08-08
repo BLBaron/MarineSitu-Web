@@ -1,0 +1,173 @@
+* {
+box-sizing: border-box;
+}
+
+*:focus {
+	outline: none;
+}
+body {
+font-family: Arial;
+background-color: white;
+padding: 0px;
+margin: 0px;
+}
+#hero {
+	width:45%;
+	overflow: hidden;
+	float:left;
+	background-color: #aac0d0;
+	height: 100vh; 
+	position: relative;
+}
+
+#hero img{
+	width:100%;
+
+
+}
+h2 {
+	position: absolute;
+	top: 90%;
+	left: 0%;
+	width: 100%;
+	text-align: center;
+	color: #06496D;
+	font-family: "Roboto Light";
+	font-size: 1.8rem;
+}
+label {
+	text-align: left;
+	font-family: "Roboto Light", hevetica, sans-serif;
+	font-size: 18px;
+	margin-left: 15%;
+	display: block;
+	margin-bottom: 5px;
+}
+#login {
+margin: 20px auto;
+width: 55%;
+float: right;
+}
+#login img {
+	width:90%;
+	display: none;
+	margin: auto;
+	margin-top: 10px;
+}
+.login-screen {
+background-color: #FFF;
+padding: 20px;
+border-radius: 5px
+}
+
+.app-title {
+text-align: left;
+color: #06496D;
+font-family: "Roboto Light", helvetica, sans-serif;
+margin: 50px;
+}
+
+.app-title h1{
+font-size: 40px;
+}
+
+.login-form {
+text-align: center;
+}
+.control-group {
+margin-bottom: 5%;
+}
+
+input {
+text-align: center;
+background-color: #ECF0F1;
+border: 2px solid transparent;
+border-radius: 3px;
+font-size: 16px;
+font-weight: 200;
+padding: 10px 0;
+width: 70%;
+transition: border .5s;
+}
+
+input:focus {
+border: 2px solid #43749B;
+box-shadow: none;
+}
+
+.btn {
+  border: 2px solid transparent;
+  background: #06496D;
+  color: #ffffff;
+  font-size: 18px;
+  line-height: 25px;
+  padding: 10px 0;
+  text-decoration: none;
+  text-shadow: none;
+  border-radius: 3px;
+  box-shadow: none;
+  transition: 0.25s;
+  display: block;
+  width: 250px;
+  margin: 0 auto;
+}
+
+.btn:hover {
+  background-color: #43749B;
+}
+
+.login-link {
+  font-size: 12px;
+  color: #444;
+  display: block;
+	margin-top: 12px;
+}
+
+@media screen and (max-width: 414px) {
+	#login { 
+		float: none;
+		margin: 0;
+		width:100%;
+		border:0; 
+	}
+	#hero {
+		width:100%;  
+		float:none;
+		display:none;
+	}
+	.login-screen {
+		padding-top: 0px;
+	}
+	.app-title {
+		text-align: center;
+		margin: 0 50px;
+	}
+	.app-title h1{
+		margin: 15px 0;
+		font-size: 30px;
+	}
+	#login img {
+		width:90%;
+		display: block;
+		margin: auto;
+		margin-top: 10px;
+	}
+}
+
+
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    #BDBDBD;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #BDBDBD;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #BDBDBD;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:    #BDBDBD;
+}
+::-ms-input-placeholder { /* Microsoft Edge */
+   color:    #BDBDBD;
+}

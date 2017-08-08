@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="front_styles.css" />
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Muli"/>	
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Catamaran"/>	
+<script src="menu_response.js"></script>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+<body>
+	<div id="container">
+		<header>
+			<div class="header" id="mainHeader">
+				<p><img src="MS wave-08.png" alt="wave">Marine Situ</p>
+				<button type="button">Click Me!</button>
+			</div>
+			<ul class="topnav" id="myTopnav">
+				<li><a href="javascript:void(0);" class="menu" onclick="myFunction()">Menu</a><li>
+			    <li><a href="#home" class="active">Front Page</a></li>
+			    <li><a href="#news">System Health</a></li>
+			    <li><a href="#contact">Detection Summary</a></li>
+			    <li><a href="#about">Sensors</a></li>
+			    <li><a href="#saving">Saving Configurations</a></li>
+			    <li><a href="#manuals">Manuals</a></li>
+			</ul>
+		</header>
+		
+		<section class="content">
+		
+			<section id="ampPower">
+				<!-- Rounded switch -->
+				
+				<label class="switchAMP">
+				  <input type="checkbox">
+				  <span class="slider sliderAMP round"></span>
+				</label>
+				<label><p>AMP Power<p></label>				
+			</section>
+			
+			<section class="main">
+			<div id="sensorControls">
+				<p>Status</p>
+				<div class="section group">			
+					<div class="col span_1_of_4">
+						<div id="ampStatus"></div>
+						<p>Most Recent Error</p>
+						<div id="error"></div>
+					</div>
+					<div class="col span_1_of_4">
+						<p>Sensors</p>
+						<div class="sensor">
+							<div class="type" id="camera">Cameras</div>
+							<label class="switch">
+								<input type="checkbox">
+								<span class="slider sliderGeneral round"></span>
+							</label>
+							<h4>Status</h4>
+							<div id="camStatus"></div>	
+						</div>
+					</div>
+					<div class="col span_1_of_4">
+						<p>s</p>
+						<div class="sensor">
+							<div class="type" id="M3">M3</div>
+							<div class="status" ></div>
+						</div>
+					</div>
+					<div class="col span_1_of_4">
+						<p>s</p>
+						<div class="sensor"></div>
+					</div>
+			</div>
+			<div class="section group">
+				<div class="col span_1_of_4">
+					<div id="offload"></div>
+				</div>
+				<div class="col span_1_of_4">
+					<div class="sensor"></div>
+				</div>
+				<div class="col span_1_of_4">
+					<div class="sensor"></div>
+				</div>
+			</div>
+
+			
+
+			</section>
+		</section>
+	</div>
+
+</body>
+</html>

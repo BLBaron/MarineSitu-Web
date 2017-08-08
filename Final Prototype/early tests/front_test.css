@@ -1,0 +1,23 @@
+.controls {
+	background-color: lavender;
+	height: 550px;
+}
+.sensor {
+	background-color: gray;
+	height: 300px;
+	margin: 10px 0px;
+}
+
+.row {
+	width: 100%;
+	margin: auto;
+}
+.container {
+	padding: 0px;
+}
+
+@media (min-width: 1400px) {
+	.container {
+    width: 1300px;
+	}
+}
